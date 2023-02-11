@@ -7,28 +7,25 @@ const count = ref(0)
 </script>
 
 <template>
-  <h1>{{ msg }}</h1>
+  <v-card>
+    <v-layout>
+      <v-app-bar color="surface-variant" title="Application bar"></v-app-bar>
 
-  <div class="card">
-    <button type="button" @click="count++">count is {{ count }}</button>
-    <p>
-      Edit
-      <code>components/HelloWorld.vue</code> to test HMR
-    </p>
-  </div>
+      <v-navigation-drawer color="surface">
+        <v-list>
+          <v-list-item title="Drawer left"></v-list-item>
+        </v-list>
+      </v-navigation-drawer>
 
-  <p>
-    Check out
-    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank"
-      >create-vue</a
-    >, the official Vue + Vite starter
-  </p>
-  <p>
-    Install
-    <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
-    in your IDE for a better DX
-  </p>
-  <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
+      <v-navigation-drawer color="surface" location="right">
+        <v-list>
+          <v-list-item title="Drawer right"></v-list-item>
+        </v-list>
+      </v-navigation-drawer>
+
+      <v-main style="min-height: 300px;"></v-main>
+    </v-layout>
+  </v-card>
 </template>
 
 <style scoped>

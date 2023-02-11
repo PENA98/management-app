@@ -1,17 +1,20 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
+  <v-card>
+    <v-layout>
+      <v-app-bar title="Application bar"></v-app-bar>
+
+      <v-navigation-drawer>
+        <v-list>
+          <v-list-item title="Navigation drawer"></v-list-item>
+        </v-list>
+      </v-navigation-drawer>
+
+      <v-main style="min-height: 300px;"></v-main>
+    </v-layout>
+  </v-card>
 </template>
 
 <style scoped>
